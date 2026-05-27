@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 20px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+
+    z-index: 9999;
+}
+
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.hero-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    position: relative;
+}
+
+/* LEVÁ VELKÁ FOTKA */
+.hero-left {
+    background: url('../images/ford1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* PRAVÁ STRANA */
+.hero-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* HORNÍ PRAVÁ */
+.hero-right .top {
+    background: url('../images/audi1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* DOLNÍ DVA BLOKY */
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bottom-left {
+    background: url('../images/pes1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bottom-right {
+    background: url('../images/pes2.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* TEXT UPROSTŘED */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+}
+
+.hero-text p {
+    opacity: 0.8;
+}/* GALERIE */
+
+.gallery {
+    columns: 6;
+    column-gap: 15px;
+
+    padding: 140px 40px 40px;
+}
+
+.gallery img {
+    width: 100%;
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+    transition: 0.5s;
+    break-inside: avoid;
+}
+
+.gallery img:hover {
+    opacity: 0.85;
+    transform: scale(1.01);
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.95);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+
+    border-radius: 10px;
+}
+/* O MNĚ */
+
+.about-section {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 140px 80px;
+
+    max-width: 1400px;
+    margin: auto;
+}
+
+.about-image img {
+    width: 450px;
+    border-radius: 20px;
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-text h1 {
+    font-size: 65px;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+
+    line-height: 1.8;
+
+    opacity: 0.85;
+}
