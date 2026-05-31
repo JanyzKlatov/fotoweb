@@ -390,7 +390,7 @@ body {
 
 .hero-right {
     grid-row: 2;
-    grid-template-rows: 1.2fr 1fr;
+    grid-template-rows: 1.1fr 1fr;
 }
 
 /* na mobilu schováme levou spodní fotku */
