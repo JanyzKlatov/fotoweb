@@ -378,7 +378,7 @@ body {
 
     .hero-grid {
         margin-top: 0px;
-        height: 80vh;
+        height: 70vh;
         grid-template-columns: 1fr;
         grid-template-rows: 55% 50%;
     }
