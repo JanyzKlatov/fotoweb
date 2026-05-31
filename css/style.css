@@ -533,4 +533,12 @@ body {
 
 .footer a:hover {
     color: white;
+}body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
 }
