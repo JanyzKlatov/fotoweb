@@ -426,7 +426,7 @@ body {
         letter-spacing: 3px;
         line-height: 1.6;
         margin-top: 6px;
-        text-shadow: 0 5px 10px rgba(0,0,0,1);
+        text-shadow: 0 2px 20px rgba(0,0,0,1);
     }
 }@media (max-width: 768px) {
 
