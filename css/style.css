@@ -388,14 +388,26 @@ body {
         background-position: center;
     }
 
-    .hero-right {
-        grid-row: 2;
-        grid-template-rows: 1.4fr 0.6fr;
-    }
+.hero-right {
+    grid-row: 2;
+    grid-template-rows: 1.4fr 0.8fr;
+}
 
-    .bottom {
-        grid-template-columns: 1fr 1fr;
-    }
+/* na mobilu schováme levou spodní fotku */
+.bottom-left {
+    display: none;
+}
+
+/* pravá spodní fotka bude přes celou šířku */
+.bottom {
+    grid-template-columns: 1fr;
+}
+
+.bottom-right {
+    display: block;
+    background-size: cover;
+    background-position: center 45%;
+}
 
     .hero-text {
         width: 90%;
