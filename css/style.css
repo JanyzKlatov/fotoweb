@@ -543,19 +543,17 @@ body {
 /* TERMS */
 
 .terms-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 180px 30px 80px;
+    padding: 130px 24px 60px;
 }
 
 .terms-section h1 {
-    font-size: 56px;
-    margin-bottom: 40px;
+    font-size: 46px;
+    line-height: 1.05;
+    margin-bottom: 30px;
 }
 
 .terms-section p {
-    font-size: 22px;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 22px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 18px;
 }
