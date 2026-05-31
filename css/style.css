@@ -125,13 +125,13 @@ body {
 .bottom-left {
     background: url('../images/leva\ dole.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center 25%;
 }
 
 .bottom-right {
     background: url('../images/prava\ dole.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center 25%;
 }
 
 /* TEXT UPROSTŘED */
