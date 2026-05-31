@@ -1,6 +1,7 @@
 html {
     overflow-y: scroll;
-}* {
+}
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -538,4 +539,23 @@ body {
 
 .footer a:hover {
     color: white;
+}
+/* TERMS */
+
+.terms-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 180px 30px 80px;
+}
+
+.terms-section h1 {
+    font-size: 56px;
+    margin-bottom: 40px;
+}
+
+.terms-section p {
+    font-size: 22px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 22px;
 }
