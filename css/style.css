@@ -412,18 +412,19 @@ body {
 
     .hero-text {
         width: 90%;
-        top: 48%;
+        top: 42%;
     }
 
     .hero-text h1 {
-        font-size: 54px;
-        line-height: 0.95;
+        font-size: 46px;
+        line-height: 0.90;
     }
 
     .hero-text p {
         font-size: 15px;
         letter-spacing: 3px;
         line-height: 1.6;
+        margin-top: 6px;
     }
 }@media (max-width: 768px) {
 
@@ -540,7 +541,6 @@ body {
 .footer a:hover {
     color: white;
 }
-/* TERMS */
 
 /* TERMS */
 
