@@ -34,15 +34,10 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
-}
 
-.logo span {
-    font-family: 'Mrs Saint Delafield', cursive;
-
-    font-size: 52px;
-    font-weight: 400;
-
-    line-height: 1;
+    font-size: 28px;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 .logo img {
@@ -167,6 +162,11 @@ body {
     column-gap: 15px;
 
     padding: 140px 40px 40px;
+}
+
+.gallery a {
+    display: block;
+    break-inside: avoid;
 }
 
 .gallery img {
@@ -376,16 +376,12 @@ body {
     font-size: 16px;
     }
 
-.hero-grid {
-    margin-top: 0;
-
-    min-height: 100vh;
-    height: auto;
-
-    grid-template-columns: 1fr;
-
-    grid-template-rows: 52vh 30vh 24vh;
-}
+    .hero-grid {
+        margin-top: 125px;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 55% 45%;
+    }
 
     .hero-left {
         grid-row: 1;
@@ -401,22 +397,20 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 
-.hero-text {
-    width: 90%;
-    top: 46%;
-
-    overflow: hidden;
-}
+    .hero-text {
+        width: 90%;
+        top: 48%;
+    }
 
     .hero-text h1 {
-        font-size: 44px;
-        line-height: 0.90;
+        font-size: 54px;
+        line-height: 0.95;
     }
 
     .hero-text p {
-        font-size: 13px;
+        font-size: 15px;
         letter-spacing: 3px;
-        line-height: 1.4;
+        line-height: 1.6;
     }
 }@media (max-width: 768px) {
 
@@ -513,46 +507,4 @@ body {
         font-size: 17px;
         line-height: 1.6;
     }
-}.footer {
-    padding: 40px 20px;
-
-    text-align: center;
-
-    border-top: 1px solid rgba(255,255,255,0.08);
-
-    margin-top: 80px;
-}
-
-.footer a {
-    color: rgba(255,255,255,0.55);
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    transition: 0.3s;
-}
-
-.footer a:hover {
-    color: white;
-}.terms-section {
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 180px 30px 80px;
-}
-
-.terms-section h1 {
-    font-size: 56px;
-
-    margin-bottom: 40px;
-}
-
-.terms-section p {
-    font-size: 22px;
-
-    line-height: 1.8;
-
-    opacity: 0.85;
 }

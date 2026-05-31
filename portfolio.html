@@ -8,8 +8,11 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
+
 <body>
 
 <header>
@@ -33,34 +36,67 @@
 
 <section class="gallery">
 
+<a href="images/are1.jpeg" class="glightbox" data-gallery="portfolio">  
     <img src="images/are1.jpeg" alt="">
+ </a>    
+ <a href="images/ares.jpeg" class="glightbox" data-gallery="portfolio">
     <img src="images/ares.jpeg" alt="">
+ </a>
+ <a href="images/deny.jpeg" class="glightbox" data-gallery="portfolio">    
     <img src="images/deny.jpeg" alt="">
+ </a>    
+ <a href="images/honza auto.jpeg" class="glightbox" data-gallery="portfolio">
     <img src="images/honza auto.jpeg" alt="">
+  </a>     
+  <a href="images/ht.jpeg" class="glightbox" data-gallery="portfolio">
     <img src="images/ht.jpeg" alt="">
+ </a>    
+ <a href="images/mustang1.jpeg" class="glightbox" data-gallery="portfolio">
     <img src="images/mustang1.jpeg" alt="">
+ </a>   
+ <a href="images/mustang2.jpeg" class="glightbox" data-gallery="portfolio">
     <img src="images/mustang2.jpeg" alt="">
+ </a>  
+ <a href="images/mustang3.jpeg" class="glightbox" data-gallery="portfolio">
     <img src="images/mustang3.jpeg" alt="">
+ </a>
+ <a href="images/par.jpeg" class="glightbox" data-gallery="portfolio">     
     <img src="images/par.jpeg" alt="">
+ </a>  
+ <a href="images/pes1.jpeg" class="glightbox" data-gallery="portfolio">  
     <img src="images/pes1.jpeg" alt="">
+ </a>
+ <a href="images/ptak1.jpeg" class="glightbox" data-gallery="portfolio">     
     <img src="images/ptak1.jpeg" alt="">
+ </a>
+ <a href="images/terka.jpeg" class="glightbox" data-gallery="portfolio">    
     <img src="images/terka.jpeg" alt="">
+ </a> 
+ <a href="images/terka1.jpeg" class="glightbox" data-gallery="portfolio">   
     <img src="images/terka1.jpeg" alt="">
+ </a>
+ <a href="images/terka2.jpeg" class="glightbox" data-gallery="portfolio">    
     <img src="images/terka2.jpeg" alt="">
+ </a>
+ <a href="images/zoe.jpeg" class="glightbox" data-gallery="portfolio">   
     <img src="images/zoe.jpeg" alt="">
+ </a>
+ <a href="images/zoe1.jpeg" class="glightbox" data-gallery="portfolio">   
     <img src="images/zoe1.jpeg" alt="">
+ </a>
+ <a href="images/zoe2.jpeg" class="glightbox" data-gallery="portfolio">   
     <img src="images/zoe2.jpeg" alt="">
+ </a>
 
 </section>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <img id="lightbox-img" src="">
-</div>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-<script src="js/script.js"></script>
-<footer class="footer">
-    <a href="terms.html">Obchodní podmínky</a>
-</footer>
+<script>
+const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true
+});
+</script>
 </body>
 </html>
