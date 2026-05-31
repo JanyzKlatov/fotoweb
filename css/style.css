@@ -380,7 +380,7 @@ body {
         margin-top: 0px;
         height: 70vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 55% 50%;
+        grid-template-rows: 55% 55%;
     }
 
     .hero-left {
