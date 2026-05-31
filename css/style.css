@@ -161,6 +161,10 @@ body {
     letter-spacing: 4px;
     font-weight: 700;
     text-transform: uppercase;
+    
+    text-shadow:
+        0 2px 10px rgba(0,0,0,1),
+        0 8px 30px rgba(0,0,0,0.9);
 }/* GALERIE */
 
 .gallery {
