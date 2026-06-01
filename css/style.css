@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    font-family: 'Mrs Saint Delafield', cursive;
+    font-family: 'Cormorant Garamond', serif;
     background: #0f0f0f;
     color: white;
 }
@@ -39,6 +39,10 @@ body {
     font-size: 28px;
     font-weight: 700;
     white-space: nowrap;
+}
+
+.logo span {
+    font-family: 'Mrs Saint Delafield', cursive;
 }
 
 .logo img {
