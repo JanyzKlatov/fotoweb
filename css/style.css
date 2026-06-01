@@ -372,9 +372,17 @@ body {
     max-width: none;
 }
 
+.logo span {
+    font-size: 32px;
+    max-width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .logo img {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
 }
 
 .nav-links {
