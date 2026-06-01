@@ -42,8 +42,9 @@ body {
 }
 
 .logo span {
-    font-family: 'Allura', cursive;
-    font-size: 42px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 56px;
+    font-weight: 400;
 }
 
 .logo img {
