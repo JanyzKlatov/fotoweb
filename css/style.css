@@ -42,7 +42,8 @@ body {
 }
 
 .logo span {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
 }
 
 .logo img {
