@@ -143,9 +143,9 @@ body {
 
 /* TEXT UPROSTŘED */
 .hero-text {
-    width: 100%;
+    position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
@@ -153,7 +153,8 @@ body {
 
 .hero-text h1 {
     font-size: 70px;
-    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 1px;
 
     text-shadow:
         0 2px 10px rgba(0,0,0,1),
