@@ -144,7 +144,7 @@ body {
 /* TEXT UPROSTŘED */
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 48%;
     transform: translate(-50%, -50%);
     text-align: center;
