@@ -152,13 +152,16 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 70px;
+    font-size: 48px;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 1.15px;
 
     text-shadow:
         0 2px 10px rgba(0,0,0,1),
         0 8px 30px rgba(0,0,0,0.9);
+
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .hero-text p {
