@@ -616,3 +616,63 @@ body {
         line-height: 1.7;
     }
 }
+
+/* ANDROID / MENŠÍ MOBILY FIX */
+@media (max-width: 430px) {
+
+    .navbar {
+        padding: 14px 12px;
+        gap: 12px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo span {
+        font-size: 30px;
+        max-width: 300px;
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow: visible;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px 22px;
+    }
+
+    .nav-links a {
+        font-size: 17px;
+    }
+
+    .hero-grid {
+        height: 68vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+
+    .hero-text {
+        top: 43%;
+        width: 92%;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+        line-height: 1.05;
+    }
+
+    .hero-text p {
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 1.35;
+        margin-top: 5px;
+    }
+}
