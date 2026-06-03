@@ -404,12 +404,12 @@ body {
     font-size: 16px;
     }
 
-    .hero-grid {
-        margin-top: 0px;
-        height: 70vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50% 50%;
-    }
+.hero-grid {
+    margin-top: 0px;
+    height: 90vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45% 55%;
+}
 
     .hero-left {
         grid-row: 1;
@@ -439,7 +439,7 @@ body {
 
     .hero-text {
         width: 90%;
-        top: 51.5%;
+        top: 45%;
     }
 
     .hero-text h1 {
