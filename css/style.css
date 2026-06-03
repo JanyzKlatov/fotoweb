@@ -408,7 +408,7 @@ body {
         margin-top: 0px;
         height: 70vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 55% 65%;
+        grid-template-rows: 50% 50%;
     }
 
     .hero-left {
@@ -658,7 +658,7 @@ body {
     }
 
     .hero-text {
-        top: 38%;
+        top: 50%;
     }
 
     .hero-text h1 {
