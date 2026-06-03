@@ -653,8 +653,11 @@ body {
         font-size: 17px;
     }
 
-    .hero-grid {
-        height: 55vh;
+.hero-grid {
+    margin-top: 0px;
+    height: 65vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
     }
 
     .hero-text {
