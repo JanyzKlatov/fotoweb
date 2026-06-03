@@ -654,25 +654,20 @@ body {
     }
 
     .hero-grid {
-        height: 68vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50% 50%;
+        height: 55vh;
     }
 
     .hero-text {
-        top: 43%;
-        width: 92%;
+        top: 38%;
     }
 
     .hero-text h1 {
-        font-size: 34px;
+        font-size: 28px;
         line-height: 1.05;
     }
 
     .hero-text p {
-        font-size: 10px;
+        font-size: 11px;
         letter-spacing: 2px;
-        line-height: 1.35;
-        margin-top: 5px;
     }
 }
