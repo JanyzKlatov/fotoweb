@@ -391,10 +391,11 @@ body {
 
 .nav-links {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
 
-    gap: 20px;
+    gap: 14px;
 
     margin: 0;
     padding: 0;
@@ -402,7 +403,8 @@ body {
 
 .nav-links a {
     font-size: 16px;
-    }
+    white-space: nowrap;
+}
 
 .hero-grid {
     margin-top: 0px;
