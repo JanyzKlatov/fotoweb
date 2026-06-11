@@ -117,7 +117,7 @@ body {
 
 /* LEVÁ VELKÁ FOTKA */
 .hero-left {
-    background: url('../images/velka1.jpeg');
+    background: url('../images/optimized/hero-velka1.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -130,7 +130,7 @@ body {
 
 /* HORNÍ PRAVÁ */
 .hero-right .top {
-    background: url('../images/nahore.jpeg');
+    background: url('../images/optimized/hero-nahore.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -142,13 +142,13 @@ body {
 }
 
 .bottom-left {
-    background: url('../images/leva\ dole.jpeg');
+    background: url('../images/optimized/hero-leva-dole.jpeg');
     background-size: cover;
     background-position: center 25%;
 }
 
 .bottom-right {
-    background: url('../images/mustang2.jpeg');
+    background: url('../images/optimized/hero-mustang2.jpeg');
     background-size: cover;
     background-position: center 25%;
 }
@@ -189,26 +189,26 @@ body {
 }/* GALERIE */
 
 .gallery {
-    columns: 6;
-    column-gap: 15px;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 18px;
     padding: 140px 40px 40px;
 }
 
 .gallery a {
     display: block;
-    break-inside: avoid;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .gallery img {
     width: 100%;
-    margin-bottom: 15px;
-
-    border-radius: 12px;
-
+    height: 100%;
+    display: block;
+    object-fit: cover;
     cursor: pointer;
     transition: 0.5s;
-    break-inside: avoid;
 }
 
 .gallery img:hover {
@@ -257,6 +257,9 @@ body {
 
 .about-image img {
     width: 450px;
+    height: 620px;
+    object-fit: cover;
+    object-position: center top;
     border-radius: 20px;
 }
 
@@ -478,6 +481,17 @@ body {
 
 @media (max-width: 768px) {
 
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 130px 16px 32px;
+    }
+
+    .gallery a {
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+    }
+
     .about-section {
         min-height: auto;
         display: flex;
@@ -490,6 +504,9 @@ body {
     .about-image img {
         width: 100%;
         max-width: 300px;
+        height: 420px;
+        object-fit: cover;
+        object-position: center top;
         border-radius: 18px;
         display: block;
         margin: 0 auto;
