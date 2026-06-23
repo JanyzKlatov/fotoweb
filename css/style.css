@@ -303,6 +303,8 @@ body {
     opacity: 0.85;
     font-size: 32px;
     line-height: 1.5;
+    max-width: 820px;
+    margin: 0 auto;
 }
 
 .phone-nowrap {
