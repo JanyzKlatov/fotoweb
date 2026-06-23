@@ -305,6 +305,10 @@ body {
     line-height: 1.5;
 }
 
+.phone-nowrap {
+    white-space: nowrap;
+}
+
 .contact-box {
     display: flex;
     justify-content: center;
