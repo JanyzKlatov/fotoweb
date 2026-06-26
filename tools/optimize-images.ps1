@@ -171,6 +171,16 @@ $results += Resize-Png `
     128
 
 $results += Resize-Png `
+    (Join-Path $root 'images\logo\seethru logo MJ.png') `
+    (Join-Path $optDir 'logo-mj-nav-42.png') `
+    42
+
+$results += Resize-Png `
+    (Join-Path $root 'images\logo\seethru logo MJ.png') `
+    (Join-Path $optDir 'logo-mj-nav-84.png') `
+    84
+
+$results += Resize-Png `
     (Join-Path $root 'images\logo\logo MJ black circle.png') `
     (Join-Path $optDir 'logo-mj-favicon.png') `
     128
