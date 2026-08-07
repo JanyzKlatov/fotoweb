@@ -6,6 +6,14 @@
 
     <title>Portfolio fotografií | Michaela Janoušová fotografka Plzeň</title>
     <meta name="description" content="Ukázky fotografií psů, aut, portrétů a párového focení od Michaely Janoušové.">
+    <link rel="canonical" href="https://michaela-janousova.cz/portfolio.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:title" content="Portfolio fotografií | Michaela Janoušová fotografka Plzeň">
+    <meta property="og:description" content="Ukázky fotografií psů, aut, portrétů a párového focení od Michaely Janoušové.">
+    <meta property="og:url" content="https://michaela-janousova.cz/portfolio.html">
+    <meta property="og:image" content="https://michaela-janousova.cz/images/thumbs/are1.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" type="image/png" href="images/optimized/logo-mj-favicon.png">
 
@@ -109,10 +117,12 @@
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
-const lightbox = GLightbox({
-    touchNavigation: true,
-    loop: true
-});
+if (window.GLightbox) {
+    GLightbox({
+        touchNavigation: true,
+        loop: true
+    });
+}
 </script>
 
 </body>

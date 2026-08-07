@@ -311,6 +311,11 @@ body {
     white-space: nowrap;
 }
 
+.contact-header a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .contact-box {
     display: flex;
     justify-content: center;
