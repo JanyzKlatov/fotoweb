@@ -115,21 +115,11 @@ body {
     position: relative;
 }
 
-/* HERO FOTKY */
-.hero-left,
-.hero-right .top,
-.bottom-left,
-.bottom-right {
-    min-width: 0;
-    min-height: 0;
-    overflow: hidden;
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+/* LEVÁ VELKÁ FOTKA */
+.hero-left {
+    background: url('../images/optimized/hero-velka1.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* PRAVÁ STRANA */
@@ -138,15 +128,29 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
+/* HORNÍ PRAVÁ */
+.hero-right .top {
+    background: url('../images/optimized/hero-nahore.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
 /* DOLNÍ DVA BLOKY */
 .bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.bottom-left .hero-image,
-.bottom-right .hero-image {
-    object-position: center 25%;
+.bottom-left {
+    background: url('../images/optimized/hero-leva-dole.jpeg');
+    background-size: cover;
+    background-position: center 25%;
+}
+
+.bottom-right {
+    background: url('../images/optimized/hero-mustang2.jpeg');
+    background-size: cover;
+    background-position: center 25%;
 }
 
 /* TEXT UPROSTŘED */
@@ -437,6 +441,7 @@ body {
 
     .hero-left {
         grid-row: 1;
+        background-position: center;
     }
 
 .hero-right {
@@ -456,10 +461,8 @@ body {
 
 .bottom-right {
     display: block;
-}
-
-.bottom-right .hero-image {
-    object-position: center 70%;
+    background-size: cover;
+    background-position: center 70%;
 }
 
     .hero-text {

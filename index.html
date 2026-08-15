@@ -16,14 +16,10 @@
 
     <link rel="icon" type="image/png" href="images/optimized/logo-mj-favicon.png">
 
-    <style>
-        html{overflow-y:scroll}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cormorant Garamond',serif;background:#0f0f0f;color:white}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.navbar{position:fixed;top:0;left:0;width:100%;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.45);backdrop-filter:blur(10px);z-index:9999}.logo{display:flex;align-items:center;gap:14px;font-size:28px;font-weight:700;white-space:nowrap}.logo span{font-family:'Great Vibes',cursive;font-size:56px;font-weight:400}.logo img{width:42px;height:42px;object-fit:contain}.nav-links{display:flex;list-style:none;gap:45px;margin-left:auto}.nav-links a{color:white;text-decoration:none;font-size:20px;font-weight:500}.hero-grid{height:100vh;display:grid;grid-template-columns:1.5fr 1fr;position:relative}.hero-left,.hero-right .top,.bottom-left,.bottom-right{min-width:0;min-height:0;overflow:hidden}.hero-right{display:grid;grid-template-rows:1fr 1fr}.bottom{display:grid;grid-template-columns:1fr 1fr}.hero-image{width:100%;height:100%;display:block;object-fit:cover}.bottom-left .hero-image,.bottom-right .hero-image{object-position:center 25%}.hero-text{position:absolute;top:25%;left:48%;transform:translate(-50%,-50%);text-align:center;color:white}.hero-text h1{font-size:45px;font-weight:600;letter-spacing:1.15px;text-shadow:0 2px 10px rgba(0,0,0,1),0 8px 30px rgba(0,0,0,.9);max-width:700px;margin:0 auto}.hero-text p{opacity:.8;font-size:24px;letter-spacing:4px;font-weight:700;text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,1),0 8px 30px rgba(0,0,0,.9)}@media (max-width:768px){.navbar{padding:14px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}.logo{justify-content:center;gap:10px;font-size:18px;line-height:1.1;max-width:none}.logo span{font-size:30px;max-width:280px;white-space:nowrap;overflow:hidden;line-height:1.3}.logo img{width:33px;height:33px;flex-shrink:0}.nav-links{display:flex;flex-wrap:nowrap;justify-content:center;align-items:center;gap:14px;margin:0;padding:0}.nav-links a{font-size:16px;white-space:nowrap}.hero-grid{height:90vh;grid-template-columns:1fr;grid-template-rows:45% 55%}.hero-left{grid-row:1}.hero-right{grid-row:2;grid-template-rows:1.1fr 1fr}.bottom-left{display:none}.bottom{grid-template-columns:1fr}.bottom-right .hero-image{object-position:center 70%}.hero-text{width:90%;top:46%}.hero-text h1{display:none}.hero-text p{font-size:13px;letter-spacing:3px;line-height:1.3;margin-top:4px;font-weight:700;text-shadow:0 2px 6px rgba(0,0,0,1),0 6px 18px rgba(0,0,0,1)}}
-    </style>
-    <link rel="preload" as="image" href="images/optimized/hero-velka1-1000.jpeg" imagesrcset="images/optimized/hero-velka1-1000.jpeg 668w, images/optimized/hero-velka1.jpeg 1335w" imagesizes="(max-width: 768px) 100vw, 60vw" fetchpriority="high">
+    <link rel="preload" as="image" href="images/optimized/hero-velka1.jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="css/style.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet"></noscript>
@@ -85,23 +81,15 @@
 
 <section class="hero-grid">
 
-    <div class="hero-left">
-        <img class="hero-image" src="images/optimized/hero-velka1.jpeg" srcset="images/optimized/hero-velka1-1000.jpeg 668w, images/optimized/hero-velka1.jpeg 1335w" sizes="(max-width: 768px) 100vw, 60vw" width="1335" height="2000" loading="eager" decoding="sync" fetchpriority="high" alt="Portrét zlatého retrívra">
-    </div>
+    <div class="hero-left"></div>
 
     <div class="hero-right">
 
-        <div class="top">
-            <img class="hero-image" src="images/optimized/hero-nahore.jpeg" srcset="images/optimized/hero-nahore-1000.jpeg 846w, images/optimized/hero-nahore.jpeg 1692w" sizes="(max-width: 768px) 100vw, 40vw" width="1692" height="2000" loading="eager" decoding="async" alt="Fotografka při focení">
-        </div>
+        <div class="top"></div>
 
         <div class="bottom">
-            <div class="bottom-left">
-                <img class="hero-image" src="images/optimized/hero-leva-dole.jpeg" srcset="images/optimized/hero-leva-dole-1000.jpeg 667w, images/optimized/hero-leva-dole.jpeg 683w" sizes="20vw" width="683" height="1024" loading="eager" decoding="async" alt="Detail automobilu">
-            </div>
-            <div class="bottom-right">
-                <img class="hero-image" src="images/optimized/hero-mustang2.jpeg" srcset="images/optimized/hero-mustang2-1000.jpeg 668w, images/optimized/hero-mustang2.jpeg 1335w" sizes="(max-width: 768px) 100vw, 20vw" width="1335" height="2000" loading="eager" decoding="async" alt="Detail kola Fordu Mustang GT">
-            </div>
+            <div class="bottom-left"></div>
+            <div class="bottom-right"></div>
         </div>
 
     </div>
