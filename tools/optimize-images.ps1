@@ -163,6 +163,13 @@ foreach ($pair in $heroImages) {
         (Join-Path $optDir $pair[1]) `
         2000 `
         78
+
+    $mobileName = $pair[1] -replace '\.jpeg$', '-1000.jpeg'
+    $results += Resize-Jpeg `
+        (Join-Path $root "images\$($pair[0])") `
+        (Join-Path $optDir $mobileName) `
+        1000 `
+        72
 }
 
 $results += Resize-Png `
