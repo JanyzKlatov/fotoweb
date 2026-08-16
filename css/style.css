@@ -365,6 +365,17 @@ body:not(.home-page) .navbar {
     color: var(--surface);
 }
 
+.terms-note {
+    text-align: center;
+    font-size: 22px;
+    color: var(--text-muted);
+    margin: -35px auto 45px;
+}
+
+.terms-note a {
+    color: var(--text);
+}
+
 .price-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
