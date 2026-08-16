@@ -657,6 +657,12 @@ body:not(.home-page) .navbar {
     margin-bottom: 40px;
 }
 
+.terms-section h2 {
+    font-size: 34px;
+    margin: 42px 0 18px;
+    color: var(--text);
+}
+
 .terms-section p {
     font-size: 22px;
     line-height: 1.8;
@@ -672,6 +678,11 @@ body:not(.home-page) .navbar {
     .terms-section h1 {
         font-size: 42px;
         line-height: 1.05;
+    }
+
+    .terms-section h2 {
+        font-size: 28px;
+        line-height: 1.15;
     }
 
     .terms-section p {
