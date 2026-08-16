@@ -562,6 +562,50 @@ body:not(.home-page) .navbar {
     text-decoration: none;
 }
 
+.booking-guide {
+    max-width: 760px;
+    margin: -20px auto 42px;
+    padding: 30px 34px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 16px 38px var(--shadow);
+}
+
+.booking-guide h2 {
+    font-size: 34px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.booking-guide p {
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 22px;
+}
+
+.booking-guide-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.booking-guide-list span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 8px 18px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 700;
+}
+
 .contact-box {
     display: flex;
     justify-content: center;
@@ -924,6 +968,31 @@ body:not(.home-page) .navbar {
     .contact-header p {
         font-size: 19px;
         line-height: 1.5;
+    }
+
+    .booking-guide {
+        margin: -12px auto 32px;
+        padding: 24px 20px;
+    }
+
+    .booking-guide h2 {
+        font-size: 28px;
+    }
+
+    .booking-guide p {
+        font-size: 17px;
+        line-height: 1.55;
+        margin-bottom: 18px;
+    }
+
+    .booking-guide-list {
+        gap: 8px;
+    }
+
+    .booking-guide-list span {
+        min-height: 34px;
+        padding: 7px 14px;
+        font-size: 15px;
     }
 
     .contact-box {
