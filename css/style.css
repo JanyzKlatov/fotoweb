@@ -7,10 +7,21 @@ html {
     box-sizing: border-box;
 }
 
+:root {
+    --page-bg: #f7f2ea;
+    --surface: #fffaf4;
+    --surface-soft: #efe5d9;
+    --text: #241f1a;
+    --text-muted: rgba(36,31,26,0.72);
+    --line: rgba(77,61,47,0.18);
+    --nav-bg: rgba(255,250,244,0.58);
+    --shadow: rgba(71,54,38,0.12);
+}
+
 body {
     font-family: 'Cormorant Garamond', serif;
-    background: #0f0f0f;
-    color: white;
+    background: var(--page-bg);
+    color: var(--text);
 }
 
 .visually-hidden {
@@ -37,10 +48,17 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    background: rgba(0,0,0,0.45);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 12px 34px var(--shadow);
 
     z-index: 9999;
+}
+
+body:not(.home-page) .navbar {
+    background: rgba(255,250,244,0.34);
+    box-shadow: 0 8px 24px rgba(71,54,38,0.06);
 }
 
 .logo {
@@ -96,7 +114,7 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--text);
     text-decoration: none;
     transition: 0.3s;
 
@@ -105,7 +123,7 @@ body {
 }
 
 .nav-links a:hover {
-    opacity: 0.7;
+    opacity: 0.65;
 }
 
 .hero-grid {
@@ -200,6 +218,8 @@ body {
     aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 12px;
+    background: var(--surface-soft);
+    box-shadow: 0 14px 36px var(--shadow);
 }
 
 .gallery img {
@@ -261,6 +281,7 @@ body {
     object-fit: cover;
     object-position: center top;
     border-radius: 20px;
+    box-shadow: 0 24px 60px var(--shadow);
 }
 
 .about-text {
@@ -325,9 +346,9 @@ body {
 }
 
 .contact-box a {
-    color: white;
+    color: var(--text);
     text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid var(--line);
 
     padding: 18px 34px;
 
@@ -340,8 +361,8 @@ body {
 }
 
 .contact-box a:hover {
-    background: white;
-    color: #0f0f0f;
+    background: var(--text);
+    color: var(--surface);
 }
 
 .price-grid {
@@ -351,10 +372,11 @@ body {
 }
 
 .price-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: var(--surface);
+    border: 1px solid var(--line);
     border-radius: 22px;
     padding: 35px 28px;
+    box-shadow: 0 18px 45px var(--shadow);
 }
 
 .price-card h2 {
@@ -370,7 +392,7 @@ body {
 
 .price-card span {
     display: block;
-    opacity: 0.75;
+    color: var(--text-muted);
     margin-bottom: 18px;
     line-height: 1.5;
 }
@@ -607,19 +629,19 @@ body {
     padding: 30px 20px;
     text-align: center;
     margin-top: 0;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid var(--line);
 }
 
 .footer a,
 .footer a:visited {
-    color: rgba(255,255,255,0.65);
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s;
 }
 
 .footer a:hover {
-    color: white;
+    color: var(--text);
 }
 
 /* TERMS */
@@ -638,7 +660,7 @@ body {
 .terms-section p {
     font-size: 22px;
     line-height: 1.8;
-    color: rgba(255,255,255,0.85);
+    color: var(--text-muted);
     margin-bottom: 22px;
 }
 @media (max-width: 768px) {
