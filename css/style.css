@@ -284,6 +284,7 @@ body:not(.home-page) .navbar {
     padding: 95px 60px 105px;
     max-width: 1280px;
     margin: 0 auto;
+    scroll-margin-top: 110px;
 }
 
 .process-header {
@@ -777,6 +778,7 @@ body:not(.home-page) .navbar {
 
     .process-section {
         padding: 58px 22px 68px;
+        scroll-margin-top: 155px;
     }
 
     .process-header {
