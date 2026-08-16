@@ -385,11 +385,50 @@ body:not(.home-page) .navbar {
 
 /* GALERIE */
 
+.portfolio-controls {
+    padding: 140px 40px 0;
+}
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.portfolio-filter-button {
+    min-height: 44px;
+    padding: 10px 24px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.portfolio-filter-button:hover,
+.portfolio-filter-button:focus-visible,
+.portfolio-filter-button.is-active {
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--surface);
+}
+
+.portfolio-filter-button:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 4px;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 18px;
-    padding: 140px 40px 40px;
+    padding: 30px 40px 40px;
 }
 
 .gallery a {
@@ -413,6 +452,10 @@ body:not(.home-page) .navbar {
 .gallery img:hover {
     opacity: 0.85;
     transform: scale(1.01);
+}
+
+.gallery a.is-hidden {
+    display: none;
 }
 
 /* LIGHTBOX */
@@ -796,10 +839,24 @@ body:not(.home-page) .navbar {
 
 @media (max-width: 768px) {
 
+    .portfolio-controls {
+        padding: 130px 16px 0;
+    }
+
+    .portfolio-filters {
+        gap: 8px;
+    }
+
+    .portfolio-filter-button {
+        min-height: 38px;
+        padding: 9px 16px;
+        font-size: 16px;
+    }
+
     .gallery {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        padding: 130px 16px 32px;
+        padding: 20px 16px 32px;
     }
 
     .gallery a {
