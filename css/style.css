@@ -49,17 +49,11 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    background: var(--nav-bg);
-    backdrop-filter: blur(10px);
+    background: var(--surface);
     border-bottom: 1px solid var(--line);
-    box-shadow: 0 12px 34px var(--shadow);
+    box-shadow: 0 8px 24px rgba(71,54,38,0.06);
 
     z-index: 9999;
-}
-
-body:not(.home-page) .navbar {
-    background: rgba(255,250,244,0.34);
-    box-shadow: 0 8px 24px rgba(71,54,38,0.06);
 }
 
 .logo {
