@@ -1085,6 +1085,11 @@ body:not(.home-page) .navbar {
     color: var(--text-muted);
     margin-bottom: 22px;
 }
+
+.terms-section p.terms-highlight {
+    font-weight: 600;
+    color: var(--text);
+}
 @media (max-width: 768px) {
 
     .terms-section {
