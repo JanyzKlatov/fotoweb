@@ -1086,10 +1086,29 @@ body:not(.home-page) .navbar {
     margin-bottom: 22px;
 }
 
-.terms-section p.terms-highlight {
+.terms-section p.terms-highlight,
+.terms-callout p {
     font-weight: 600;
     color: var(--text);
 }
+
+.terms-callout {
+    margin: 12px 0 34px;
+    padding: 22px 26px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--text);
+    box-shadow: 0 14px 34px var(--shadow);
+}
+
+.terms-callout p {
+    margin-bottom: 18px;
+}
+
+.terms-callout p:last-child {
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
 
     .terms-section {
@@ -1109,5 +1128,9 @@ body:not(.home-page) .navbar {
     .terms-section p {
         font-size: 17px;
         line-height: 1.7;
+    }
+
+    .terms-callout {
+        padding: 18px 20px;
     }
 }
