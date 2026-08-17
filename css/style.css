@@ -378,6 +378,79 @@ body {
     outline-offset: 4px;
 }
 
+.gift-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 34px;
+    padding: 46px 60px;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.gift-strip-content {
+    max-width: 780px;
+}
+
+.gift-strip-content span,
+.voucher-copy > span {
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.gift-strip h2 {
+    font-size: 44px;
+    line-height: 1.05;
+    margin-bottom: 12px;
+}
+
+.gift-strip p {
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.gift-strip a,
+.gift-contact-card a,
+.voucher-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.gift-strip a,
+.gift-contact-card a,
+.voucher-button-primary {
+    background: var(--text);
+    border: 1px solid var(--text);
+    color: var(--surface);
+}
+
+.gift-strip a:hover,
+.gift-strip a:focus-visible,
+.gift-contact-card a:hover,
+.gift-contact-card a:focus-visible,
+.voucher-button-primary:hover,
+.voucher-button-primary:focus-visible {
+    background: transparent;
+    color: var(--text);
+}
+
 /* GALERIE */
 
 .portfolio-controls {
@@ -600,6 +673,31 @@ body {
     font-weight: 700;
 }
 
+.gift-contact-card {
+    max-width: 760px;
+    margin: -14px auto 42px;
+    padding: 30px 34px;
+    text-align: center;
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.gift-contact-card h2 {
+    font-size: 34px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.gift-contact-card p {
+    max-width: 640px;
+    margin: 0 auto 22px;
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
 .contact-box {
     display: flex;
     justify-content: center;
@@ -674,11 +772,169 @@ body {
     margin-bottom: 18px;
     line-height: 1.5;
 }
+
+/* DÁRKOVÝ POUKAZ */
+
+.voucher-page {
+    padding: 150px 60px 80px;
+}
+
+.voucher-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+    align-items: center;
+    gap: 54px;
+    max-width: 1320px;
+    margin: 0 auto 82px;
+}
+
+.voucher-copy h1 {
+    font-size: 64px;
+    line-height: 1.02;
+    margin-bottom: 22px;
+}
+
+.voucher-copy p {
+    max-width: 620px;
+    font-size: 25px;
+    line-height: 1.55;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.voucher-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.voucher-button-secondary {
+    border: 1px solid var(--line);
+    color: var(--text);
+    background: transparent;
+}
+
+.voucher-button-secondary:hover,
+.voucher-button-secondary:focus-visible {
+    border-color: var(--text);
+    background: var(--surface);
+}
+
+.voucher-preview-safe {
+    display: grid;
+    gap: 16px;
+    padding: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 20px 48px var(--shadow);
+    user-select: none;
+}
+
+.voucher-preview-safe figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    background: var(--surface-soft);
+}
+
+.voucher-preview-safe img {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+.voucher-preview-safe figcaption {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255,250,244,0.82);
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.voucher-info {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.voucher-info h2 {
+    text-align: center;
+    font-size: 52px;
+    line-height: 1.05;
+    margin-bottom: 34px;
+}
+
+.voucher-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.voucher-info-grid article {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 28px 26px;
+    box-shadow: 0 16px 38px var(--shadow);
+}
+
+.voucher-info-grid span {
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+.voucher-info-grid h3 {
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.voucher-info-grid p {
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 500;
+    color: rgba(36,31,26,0.82);
+}
+
 /* MOBILNÍ VERZE */
 
 @media (max-width: 1100px) {
     .process-steps {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        padding: 18px 34px;
+    }
+
+    .logo span {
+        font-size: 46px;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .voucher-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .voucher-info-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -723,18 +979,18 @@ body {
 
 .nav-links {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-    gap: 14px;
+    gap: 10px 16px;
 
     margin: 0;
     padding: 0;
 }
 
 .nav-links a {
-    font-size: 16px;
+    font-size: 15px;
     white-space: nowrap;
 }
 
@@ -875,6 +1131,31 @@ body {
         font-size: 18px;
     }
 
+    .gift-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        padding: 34px 22px;
+    }
+
+    .gift-strip-content span,
+    .voucher-copy > span {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .gift-strip h2 {
+        font-size: 36px;
+    }
+
+    .gift-strip p {
+        font-size: 18px;
+    }
+
+    .gift-strip a {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -989,6 +1270,20 @@ body {
         font-size: 15px;
     }
 
+    .gift-contact-card {
+        margin: -8px auto 32px;
+        padding: 24px 20px;
+    }
+
+    .gift-contact-card h2 {
+        font-size: 28px;
+    }
+
+    .gift-contact-card p {
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
     .contact-box {
         flex-direction: column;
         align-items: center;
@@ -1032,6 +1327,56 @@ body {
     .price-card span {
         font-size: 17px;
         line-height: 1.6;
+    }
+
+    .voucher-page {
+        padding: 130px 22px 60px;
+    }
+
+    .voucher-hero {
+        gap: 34px;
+        margin-bottom: 54px;
+    }
+
+    .voucher-copy h1 {
+        font-size: 44px;
+    }
+
+    .voucher-copy p {
+        font-size: 19px;
+    }
+
+    .voucher-actions {
+        flex-direction: column;
+    }
+
+    .voucher-button {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .voucher-preview-safe {
+        padding: 10px;
+    }
+
+    .voucher-preview-safe figcaption {
+        font-size: 16px;
+    }
+
+    .voucher-info h2 {
+        font-size: 38px;
+    }
+
+    .voucher-info-grid article {
+        padding: 24px 22px;
+    }
+
+    .voucher-info-grid h3 {
+        font-size: 27px;
+    }
+
+    .voucher-info-grid p {
+        font-size: 17px;
     }
 }
 /* FOOTER */
