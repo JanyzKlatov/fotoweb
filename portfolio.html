@@ -32,18 +32,18 @@
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="logo">
+    <nav class="navbar" aria-label="Hlavní navigace">
+        <a class="logo" href="./" aria-label="Michaela Janoušová - domů">
 
-        <img src="images/optimized/logo-mj-nav-black-42.png" width="42" height="42" decoding="async" alt="Logo fotografky Michaely Janoušové">
+        <img src="images/optimized/logo-mj-nav-black-42.png" width="42" height="42" decoding="async" alt="">
 
         <span>Michaela Janoušová</span>
 
-</div>
+</a>
 
         <ul class="nav-links">
             <li><a href="./">Domů</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
             <li><a href="about.html">O mně</a></li>
             <li><a href="voucher.html">Dárkový poukaz</a></li>
             <li><a href="contact.html">Kontakt a ceník</a></li>
@@ -51,6 +51,7 @@
     </nav>
 </header>
 
+<main>
 <section class="portfolio-controls" aria-labelledby="portfolio-title">
     <h1 id="portfolio-title" class="visually-hidden">Portfolio fotografií psů, aut, portrétů a párů</h1>
     <div class="portfolio-filters" aria-label="Filtrovat portfolio podle typu focení">
@@ -120,6 +121,7 @@
  </a>
 
 </section>
+</main>
 <footer class="footer">
     <a href="terms.html">Obchodní podmínky © 2026 Michaela Janoušová</a>
 </footer>

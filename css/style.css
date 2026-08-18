@@ -64,6 +64,8 @@ body {
     font-size: 28px;
     font-weight: 700;
     white-space: nowrap;
+    color: var(--text);
+    text-decoration: none;
 }
 
 .logo span {
@@ -119,6 +121,12 @@ body {
 
 .nav-links a:hover {
     opacity: 0.65;
+}
+
+.nav-links a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
 }
 
 .hero-grid {
