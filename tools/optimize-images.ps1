@@ -138,8 +138,7 @@ $portfolioImages = @(
     'terka2.jpeg',
     'zoe.jpeg',
     'zoe1.jpeg',
-    'zoe2.jpeg',
-    'audi1.jpeg'
+    'zoe2.jpeg'
 )
 
 foreach ($image in $portfolioImages) {
