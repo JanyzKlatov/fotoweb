@@ -122,7 +122,6 @@ function Resize-Png($src, $dest, $maxLongSide) {
 $results = @()
 
 $portfolioImages = @(
-    'are1.jpeg',
     'ares.jpeg',
     'deny.jpeg',
     'honza auto.jpeg',
