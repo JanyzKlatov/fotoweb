@@ -159,10 +159,10 @@ if (Test-Path -LiteralPath $portfolioDir) {
 }
 
 $heroImages = @(
-    @('velka1.jpeg', 'hero-velka1.jpeg'),
-    @('nahore.jpeg', 'hero-nahore.jpeg'),
-    @('leva dole.jpeg', 'hero-leva-dole.jpeg'),
-    @('mustang2.jpeg', 'hero-mustang2.jpeg')
+    @('portfolio/mazlicci/ares-v-lese.jpg', 'hero-ares.jpeg'),
+    @('portfolio/pary/motorkarsky-par-02.jpg', 'hero-motorkarsky-par.jpeg'),
+    @('portfolio/portrety/katarinka-14.jpg', 'hero-katarinka.jpeg'),
+    @('portfolio/ostatni/svicka-fik-a-granat.jpg', 'hero-svicka.jpeg')
 )
 
 foreach ($pair in $heroImages) {
