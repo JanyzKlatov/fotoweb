@@ -131,7 +131,6 @@ $portfolioImages = @(
     'mustang3.jpeg',
     'par.jpeg',
     'pes1.jpeg',
-    'ptak1.jpeg',
     'terka.jpeg',
     'terka1.jpeg',
     'terka2.jpeg',
