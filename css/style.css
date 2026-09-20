@@ -502,7 +502,7 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(340px, calc((100% - 18px) / 2)), 1fr));
     gap: 18px;
     padding: 30px 40px 40px;
 }
@@ -530,7 +530,15 @@ body {
     transform: scale(1.01);
 }
 
-.gallery a.is-hidden {
+/* Varianty stejného záběru zůstávají vedle sebe i při změně počtu sloupců. */
+.gallery-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column: span 2;
+    gap: inherit;
+}
+
+.gallery .is-hidden {
     display: none;
 }
 

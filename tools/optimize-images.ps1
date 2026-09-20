@@ -150,6 +150,17 @@ foreach ($image in $portfolioImages) {
         72
 }
 
+# New portfolio originals are organized in category folders.
+$portfolioDir = Join-Path $root 'images\portfolio'
+if (Test-Path -LiteralPath $portfolioDir) {
+    foreach ($image in Get-ChildItem -LiteralPath $portfolioDir -Recurse -File -Filter '*.jpg') {
+        $relativePath = [System.IO.Path]::GetRelativePath($portfolioDir, $image.FullName)
+        $destination = Join-Path $thumbDir $relativePath
+        New-Item -ItemType Directory -Force -Path (Split-Path $destination -Parent) | Out-Null
+        $results += Resize-Jpeg $image.FullName $destination 900 78
+    }
+}
+
 $heroImages = @(
     @('velka1.jpeg', 'hero-velka1.jpeg'),
     @('nahore.jpeg', 'hero-nahore.jpeg'),
