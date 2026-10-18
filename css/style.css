@@ -502,6 +502,7 @@ body {
 
 .gallery {
     display: grid;
+    grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fit, minmax(min(340px, calc((100% - 18px) / 2)), 1fr));
     gap: 18px;
     padding: 30px 40px 40px;
