@@ -4,9 +4,11 @@ Add-Type -AssemblyName System.Drawing
 
 $root = Resolve-Path (Join-Path $PSScriptRoot '..')
 $thumbDir = Join-Path $root 'images\thumbs'
+$smallThumbDir = Join-Path $root 'images\thumbs-mobile'
 $optDir = Join-Path $root 'images\optimized'
+$displayDir = Join-Path $root 'images\display'
 
-New-Item -ItemType Directory -Force -Path $thumbDir, $optDir | Out-Null
+New-Item -ItemType Directory -Force -Path $thumbDir, $smallThumbDir, $optDir, $displayDir | Out-Null
 
 function Get-ImageEncoder($mimeType) {
     [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() |
@@ -140,11 +142,16 @@ $portfolioImages = @(
 )
 
 foreach ($image in $portfolioImages) {
+    $source = Join-Path $root "images\$image"
     $results += Resize-Jpeg `
-        (Join-Path $root "images\$image") `
+        $source `
         (Join-Path $thumbDir $image) `
         900 `
         72
+    $results += Resize-Jpeg $source (Join-Path $smallThumbDir $image) 600 72
+
+    # Full-screen gallery images do not need the camera's original resolution.
+    $results += Resize-Jpeg $source (Join-Path $displayDir $image) 2000 82
 }
 
 # New portfolio originals are organized in category folders.
@@ -153,8 +160,14 @@ if (Test-Path -LiteralPath $portfolioDir) {
     foreach ($image in Get-ChildItem -LiteralPath $portfolioDir -Recurse -File -Filter '*.jpg') {
         $relativePath = [System.IO.Path]::GetRelativePath($portfolioDir, $image.FullName)
         $destination = Join-Path $thumbDir $relativePath
+        $smallDestination = Join-Path $smallThumbDir $relativePath
+        $displayDestination = Join-Path $displayDir $relativePath
         New-Item -ItemType Directory -Force -Path (Split-Path $destination -Parent) | Out-Null
+        New-Item -ItemType Directory -Force -Path (Split-Path $smallDestination -Parent) | Out-Null
+        New-Item -ItemType Directory -Force -Path (Split-Path $displayDestination -Parent) | Out-Null
         $results += Resize-Jpeg $image.FullName $destination 900 78
+        $results += Resize-Jpeg $image.FullName $smallDestination 600 72
+        $results += Resize-Jpeg $image.FullName $displayDestination 2000 82
     }
 }
 
