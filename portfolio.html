@@ -65,7 +65,7 @@
     </div>
 </section>
 
-<section class="gallery show-all" aria-label="Fotogalerie">
+<section class="gallery" aria-label="Fotogalerie">
 <!-- mazlicci -->
 
 <a href="images/display/ares.jpeg" class="glightbox" data-gallery="portfolio" data-categories="mazlicci">
@@ -102,7 +102,7 @@
 
 <!-- auta -->
 
-<a href="images/display/honza%20auto.jpeg" class="glightbox category-start" data-gallery="portfolio" data-categories="auta">
+<a href="images/display/honza%20auto.jpeg" class="glightbox" data-gallery="portfolio" data-categories="auta">
     <img src="images/thumbs/honza%20auto.jpeg" srcset="images/thumbs-mobile/honza%20auto.jpeg 519w, images/thumbs/honza%20auto.jpeg 778w" sizes="(max-width: 768px) calc(50vw - 21px), (max-width: 1100px) calc(50vw - 49px), 33vw" width="778" height="900" loading="lazy" decoding="async" alt="Škoda Scala na uzavřené silnici u Plzně">
   </a>
 
@@ -156,7 +156,7 @@
 
 <!-- portrety -->
 
-<div class="gallery-pair category-start" data-categories="portrety">
+<div class="gallery-pair" data-categories="portrety">
 <a href="images/display/terka.jpeg" class="glightbox" data-gallery="portfolio" data-categories="portrety">
     <img src="images/thumbs/terka.jpeg" srcset="images/thumbs-mobile/terka.jpeg 508w, images/thumbs/terka.jpeg 761w" sizes="(max-width: 768px) calc(50vw - 21px), (max-width: 1100px) calc(50vw - 49px), 33vw" width="761" height="900" loading="lazy" decoding="async" alt="Černobílá fotka slečny na parkovišti v Plzni">
  </a>
@@ -191,7 +191,7 @@
 
 <!-- pary -->
 
-<a href="images/display/ht.jpeg" class="glightbox category-start" data-gallery="portfolio" data-categories="pary mazlicci">
+<a href="images/display/ht.jpeg" class="glightbox" data-gallery="portfolio" data-categories="pary mazlicci">
     <img src="images/thumbs/ht.jpeg" srcset="images/thumbs-mobile/ht.jpeg 401w, images/thumbs/ht.jpeg 601w" sizes="(max-width: 768px) calc(50vw - 21px), (max-width: 1100px) calc(50vw - 49px), 33vw" width="601" height="900" loading="lazy" decoding="async" alt="Pár se Zlatým retrívrem na louce">
  </a>
 
@@ -209,7 +209,7 @@
 
 <!-- udalosti -->
 
-<a href="images/display/udalosti/rozlucka-bryle.jpg" class="glightbox category-start" data-gallery="portfolio" data-categories="udalosti">
+<a href="images/display/udalosti/rozlucka-bryle.jpg" class="glightbox" data-gallery="portfolio" data-categories="udalosti">
     <img src="images/thumbs/udalosti/rozlucka-bryle.jpg" srcset="images/thumbs-mobile/udalosti/rozlucka-bryle.jpg 600w, images/thumbs/udalosti/rozlucka-bryle.jpg 900w" sizes="(max-width: 768px) calc(50vw - 21px), (max-width: 1100px) calc(50vw - 49px), 33vw" width="900" height="601" loading="lazy" decoding="async" alt="Růžové brýle ve tvaru srdce na rozlučce">
 </a>
 
@@ -246,7 +246,7 @@
 
 <!-- ostatni -->
 
-<a href="images/display/ostatni/svicka-zazracna-dyne.jpg" class="glightbox category-start" data-gallery="portfolio" data-categories="ostatni">
+<a href="images/display/ostatni/svicka-zazracna-dyne.jpg" class="glightbox" data-gallery="portfolio" data-categories="ostatni">
     <img src="images/thumbs/ostatni/svicka-zazracna-dyne.jpg" srcset="images/thumbs-mobile/ostatni/svicka-zazracna-dyne.jpg 452w, images/thumbs/ostatni/svicka-zazracna-dyne.jpg 678w" sizes="(max-width: 768px) calc(50vw - 21px), (max-width: 1100px) calc(50vw - 49px), 33vw" width="678" height="900" loading="lazy" decoding="async" alt="Svíčka Zapálená Zázračná dýně s podzimní dekorací">
 </a>
 
@@ -341,7 +341,6 @@ initPortfolioLightbox();
 document.querySelectorAll('.portfolio-filter-button').forEach((button) => {
     button.addEventListener('click', () => {
         const filter = button.dataset.filter;
-        document.querySelector('.gallery').classList.toggle('show-all', filter === 'all');
 
         document.querySelectorAll('.portfolio-filter-button').forEach((filterButton) => {
             const isActive = filterButton === button;

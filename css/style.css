@@ -538,15 +538,6 @@ body {
     gap: inherit;
 }
 
-/* Ve výpisu všech fotek začíná každá kategorie v prvním sloupci. */
-.gallery.show-all > .category-start {
-    grid-column-start: 1;
-}
-
-.gallery.show-all > .gallery-pair.category-start {
-    grid-column: 1 / span 2;
-}
-
 .gallery .is-hidden {
     display: none;
 }
