@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Cormorant Garamond Fallback', serif;
     background: var(--page-bg);
     color: var(--text);
 }
@@ -69,7 +69,7 @@ body {
 }
 
 .logo span {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Great Vibes', 'Great Vibes Fallback', cursive;
     font-size: 56px;
     font-weight: 400;
 }
@@ -473,6 +473,9 @@ body {
 }
 
 .portfolio-filter-button {
+    flex: 0 0 auto;
+    width: calc(var(--filter-text-width) + 50px);
+    white-space: nowrap;
     min-height: 44px;
     padding: 10px 24px;
     border: 1px solid var(--line);
@@ -486,6 +489,16 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
+
+/* Natural label widths in Cormorant Garamond 700 at 20px.
+   Reserve these before font loading so the existing flex rows never rewrap. */
+.portfolio-filter-button[data-filter="all"] { --filter-text-width: 1.415625em; }
+.portfolio-filter-button[data-filter="mazlicci"] { --filter-text-width: 3.32734375em; }
+.portfolio-filter-button[data-filter="auta"] { --filter-text-width: 6.25546875em; }
+.portfolio-filter-button[data-filter="portrety"] { --filter-text-width: 3.28203125em; }
+.portfolio-filter-button[data-filter="pary"] { --filter-text-width: 1.75em; }
+.portfolio-filter-button[data-filter="udalosti"] { --filter-text-width: 3.3046875em; }
+.portfolio-filter-button[data-filter="ostatni"] { --filter-text-width: 2.98515625em; }
 
 .portfolio-filter-button:hover,
 .portfolio-filter-button:focus-visible,
@@ -1185,10 +1198,20 @@ body {
     }
 
     .portfolio-filter-button {
+        width: calc(var(--filter-text-width) + 34px);
         min-height: 38px;
         padding: 9px 16px;
         font-size: 16px;
     }
+
+    /* The same labels at the existing mobile font size of 16px. */
+    .portfolio-filter-button[data-filter="all"] { --filter-text-width: 1.4150390625em; }
+    .portfolio-filter-button[data-filter="mazlicci"] { --filter-text-width: 3.3271484375em; }
+    .portfolio-filter-button[data-filter="auta"] { --filter-text-width: 6.255859375em; }
+    .portfolio-filter-button[data-filter="portrety"] { --filter-text-width: 3.2822265625em; }
+    .portfolio-filter-button[data-filter="pary"] { --filter-text-width: 1.7509765625em; }
+    .portfolio-filter-button[data-filter="udalosti"] { --filter-text-width: 3.3046875em; }
+    .portfolio-filter-button[data-filter="ostatni"] { --filter-text-width: 2.9853515625em; }
 
     .gallery {
         grid-template-columns: repeat(2, 1fr);
