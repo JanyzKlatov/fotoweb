@@ -11,9 +11,13 @@ const versionLength = 16;
 const imageUrl = /(?:https:\/\/michaela-janousova\.cz\/|\.\.\/)?images\/[^\s"'<>),;]+/g;
 const files = [
   ...fs.readdirSync(root).filter(name => name.endsWith('.html')).map(name => path.join(root, name)),
-  ...['css', 'js'].flatMap(directory => fs.readdirSync(path.join(root, directory))
-    .filter(name => /\.(?:css|js)$/.test(name))
-    .map(name => path.join(root, directory, name)))
+  ...['css', 'js'].flatMap(directory => {
+    const directoryPath = path.join(root, directory);
+    if (!fs.existsSync(directoryPath)) return [];
+    return fs.readdirSync(directoryPath, { withFileTypes: true })
+      .filter(entry => entry.isFile() && /\.(?:css|js)$/.test(entry.name))
+      .map(entry => path.join(directoryPath, entry.name));
+  })
 ];
 const hashes = new Map();
 const updates = [];
