@@ -1,0 +1,10 @@
+{
+  "name": "fotoweb-image-tools",
+  "private": true,
+  "scripts": {
+    "portfolio:images": "node generate-portfolio-images.cjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}
