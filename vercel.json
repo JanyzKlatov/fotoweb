@@ -1,12 +1,25 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node tools/version-images.cjs",
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/images/(.*)",
+      "missing": [{ "type": "query", "key": "v" }],
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "has": [{ "type": "query", "key": "v" }],
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     },

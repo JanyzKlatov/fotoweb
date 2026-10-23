@@ -48,6 +48,7 @@ async function main() {
     console.log(`${photo.name}: ${widths.join(', ')} px`);
   }
   console.log(`Created ${count} AVIF/WebP images in ${outputDirectory}`);
+  require('./version-images.cjs');
 }
 
 main().catch(error => {

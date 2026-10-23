@@ -47,7 +47,7 @@ function escapeHtml(value) {
 function writeReviewPage(images, variants) {
   const cards = images.map(([img, url]) => {
     const jpegSrcset = img.match(/\bsrcset="([^\"]+)"/)[1];
-    const jpegUrl = jpegSrcset.split(',').at(-1).trim().split(' ')[0];
+    const jpegUrl = jpegSrcset.split(',').at(-1).trim().split(' ')[0].replace(/\?v=[a-f0-9]{16}$/, '');
     const name = escapeHtml(decodeURIComponent(url.slice('images/thumbs/'.length)));
     const files = [
       { label: 'JPEG', url: jpegUrl },
@@ -69,7 +69,7 @@ function writeReviewPage(images, variants) {
 
 async function main() {
   const html = fs.readFileSync(htmlPath, 'utf8');
-  const images = [...html.matchAll(/<img\b[^>]*\bsrc="(images\/thumbs\/[^\"]+)"[^>]*>/g)];
+  const images = [...html.matchAll(/<img\b[^>]*\bsrc="(images\/thumbs\/[^\"?]+)(?:\?v=[a-f0-9]{16})?"[^>]*>/g)];
   if (!images.length) throw new Error('No portfolio images found');
 
   const variants = new Map();
@@ -105,7 +105,7 @@ async function main() {
 
   let replacements = 0;
   const updated = html.replace(/<picture>[\s\S]*?<\/picture>|<img\b[^>]*>/g, block => {
-    const match = block.match(/<img\b[^>]*\bsrc="(images\/thumbs\/[^\"]+)"[^>]*>/);
+    const match = block.match(/<img\b[^>]*\bsrc="(images\/thumbs\/[^\"?]+)(?:\?v=[a-f0-9]{16})?"[^>]*>/);
     if (!match) return block;
     const [img, url] = match;
     const sizes = img.match(/\bsizes="([^\"]+)"/)?.[1];
@@ -128,6 +128,7 @@ async function main() {
   }
   const reviewPath = writeReviewPage(images, variants);
   console.log(`Review page for ${images.length} photos: ${reviewPath}`);
+  require('./version-images.cjs');
 }
 
 main().catch(error => {
