@@ -22,8 +22,6 @@
 
     <link rel="icon" type="image/png" href="images/optimized/logo-mj-favicon.png">
 
-    <link rel="preload" as="image" href="images/optimized/hero-ares.jpeg" media="(min-width: 769px)" fetchpriority="high">
-    <link rel="preload" as="image" href="images/optimized/hero-ares-1000.jpeg" media="(max-width: 768px)" fetchpriority="high">
     <link rel="preload" href="fonts/cormorant-garamond-latin-ext-v21-cfa9a397d86f.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/cormorant-garamond-latin-v21-d80df8ff5aec.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/great-vibes-latin-ext-v21-b63469c752ef.woff2" as="font" type="font/woff2" crossorigin>
@@ -90,15 +88,51 @@
 <main>
 <section class="hero-grid">
 
-    <div class="hero-left" role="img" aria-label="Áres na pařezu v lese"></div>
+    <div class="hero-left" role="img" aria-label="Áres na pařezu v lese">
+        <picture class="hero-photo">
+            <source media="(max-width: 768px)" type="image/avif" srcset="images/optimized/hero-ares-400.avif 400w, images/optimized/hero-ares-600.avif 600w, images/optimized/hero-ares-667.avif 667w" sizes="100vw">
+            <source type="image/avif" srcset="images/optimized/hero-ares-400.avif 400w, images/optimized/hero-ares-600.avif 600w, images/optimized/hero-ares-667.avif 667w, images/optimized/hero-ares-800.avif 800w, images/optimized/hero-ares-1200.avif 1200w, images/optimized/hero-ares-1333.avif 1333w" sizes="60vw">
+            <source media="(max-width: 768px)" type="image/webp" srcset="images/optimized/hero-ares-400.webp 400w, images/optimized/hero-ares-600.webp 600w, images/optimized/hero-ares-667.webp 667w" sizes="100vw">
+            <source type="image/webp" srcset="images/optimized/hero-ares-400.webp 400w, images/optimized/hero-ares-600.webp 600w, images/optimized/hero-ares-667.webp 667w, images/optimized/hero-ares-800.webp 800w, images/optimized/hero-ares-1200.webp 1200w, images/optimized/hero-ares-1333.webp 1333w" sizes="60vw">
+            <source media="(max-width: 768px)" type="image/jpeg" srcset="images/optimized/hero-ares-1000.jpeg">
+            <img src="images/optimized/hero-ares.jpeg" width="1333" height="2000" fetchpriority="high" loading="eager" alt="">
+        </picture>
+    </div>
 
     <div class="hero-right">
 
-        <div class="top" role="img" aria-label="Motorkářský pár v objetí"></div>
+        <div class="top" role="img" aria-label="Motorkářský pár v objetí">
+            <picture class="hero-photo">
+                <source media="(max-width: 768px)" type="image/avif" srcset="images/optimized/hero-motorkarsky-par-400.avif 400w, images/optimized/hero-motorkarsky-par-600.avif 600w, images/optimized/hero-motorkarsky-par-818.avif 818w" sizes="100vw">
+                <source type="image/avif" srcset="images/optimized/hero-motorkarsky-par-400.avif 400w, images/optimized/hero-motorkarsky-par-600.avif 600w, images/optimized/hero-motorkarsky-par-818.avif 818w, images/optimized/hero-motorkarsky-par-1200.avif 1200w, images/optimized/hero-motorkarsky-par-1635.avif 1635w" sizes="40vw">
+                <source media="(max-width: 768px)" type="image/webp" srcset="images/optimized/hero-motorkarsky-par-400.webp 400w, images/optimized/hero-motorkarsky-par-600.webp 600w, images/optimized/hero-motorkarsky-par-818.webp 818w" sizes="100vw">
+                <source type="image/webp" srcset="images/optimized/hero-motorkarsky-par-400.webp 400w, images/optimized/hero-motorkarsky-par-600.webp 600w, images/optimized/hero-motorkarsky-par-818.webp 818w, images/optimized/hero-motorkarsky-par-1200.webp 1200w, images/optimized/hero-motorkarsky-par-1635.webp 1635w" sizes="40vw">
+                <source media="(max-width: 768px)" type="image/jpeg" srcset="images/optimized/hero-motorkarsky-par-1000.jpeg">
+                <img src="images/optimized/hero-motorkarsky-par.jpeg" width="1635" height="2000" loading="eager" alt="">
+            </picture>
+        </div>
 
         <div class="bottom">
-            <div class="bottom-left" role="img" aria-label="Portrét dívky hrající na kytaru"></div>
-            <div class="bottom-right" role="img" aria-label="Produktová fotografie svíčky Zapálená Fík a granát"></div>
+            <div class="bottom-left" role="img" aria-label="Portrét dívky hrající na kytaru">
+                <picture class="hero-photo">
+                    <source media="(max-width: 768px)" type="image/avif" srcset="images/optimized/hero-katarinka-400.avif 400w, images/optimized/hero-katarinka-600.avif 600w, images/optimized/hero-katarinka-667.avif 667w" sizes="50vw">
+                    <source type="image/avif" srcset="images/optimized/hero-katarinka-400.avif 400w, images/optimized/hero-katarinka-600.avif 600w, images/optimized/hero-katarinka-667.avif 667w, images/optimized/hero-katarinka-800.avif 800w, images/optimized/hero-katarinka-1200.avif 1200w, images/optimized/hero-katarinka-1333.avif 1333w" sizes="20vw">
+                    <source media="(max-width: 768px)" type="image/webp" srcset="images/optimized/hero-katarinka-400.webp 400w, images/optimized/hero-katarinka-600.webp 600w, images/optimized/hero-katarinka-667.webp 667w" sizes="50vw">
+                    <source type="image/webp" srcset="images/optimized/hero-katarinka-400.webp 400w, images/optimized/hero-katarinka-600.webp 600w, images/optimized/hero-katarinka-667.webp 667w, images/optimized/hero-katarinka-800.webp 800w, images/optimized/hero-katarinka-1200.webp 1200w, images/optimized/hero-katarinka-1333.webp 1333w" sizes="20vw">
+                    <source media="(max-width: 768px)" type="image/jpeg" srcset="images/optimized/hero-katarinka-1000.jpeg">
+                    <img src="images/optimized/hero-katarinka.jpeg" width="1333" height="2000" loading="eager" alt="">
+                </picture>
+            </div>
+            <div class="bottom-right" role="img" aria-label="Produktová fotografie svíčky Zapálená Fík a granát">
+                <picture class="hero-photo">
+                    <source media="(max-width: 768px)" type="image/avif" srcset="images/optimized/hero-svicka-400.avif 400w, images/optimized/hero-svicka-600.avif 600w, images/optimized/hero-svicka-807.avif 807w" sizes="50vw">
+                    <source type="image/avif" srcset="images/optimized/hero-svicka-400.avif 400w, images/optimized/hero-svicka-600.avif 600w, images/optimized/hero-svicka-807.avif 807w, images/optimized/hero-svicka-1200.avif 1200w, images/optimized/hero-svicka-1614.avif 1614w" sizes="20vw">
+                    <source media="(max-width: 768px)" type="image/webp" srcset="images/optimized/hero-svicka-400.webp 400w, images/optimized/hero-svicka-600.webp 600w, images/optimized/hero-svicka-807.webp 807w" sizes="50vw">
+                    <source type="image/webp" srcset="images/optimized/hero-svicka-400.webp 400w, images/optimized/hero-svicka-600.webp 600w, images/optimized/hero-svicka-807.webp 807w, images/optimized/hero-svicka-1200.webp 1200w, images/optimized/hero-svicka-1614.webp 1614w" sizes="20vw">
+                    <source media="(max-width: 768px)" type="image/jpeg" srcset="images/optimized/hero-svicka-1000.jpeg">
+                    <img src="images/optimized/hero-svicka.jpeg" width="1614" height="2000" loading="eager" alt="">
+                </picture>
+            </div>
         </div>
 
     </div>
