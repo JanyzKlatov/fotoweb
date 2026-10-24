@@ -4,6 +4,7 @@
   "scripts": {
     "portfolio:images": "node generate-portfolio-images.cjs",
     "home:images": "node generate-home-images.cjs",
+    "page:images": "node generate-page-images.cjs",
     "images:version": "node version-images.cjs",
     "images:check": "node version-images.cjs --check"
   },

@@ -20,11 +20,22 @@ npm run home:images
 
 Skript vytváří varianty v `images/optimized/` a kontroluje rozměry stávajících JPEGů. Pokud se rozměry JPEGů změní, je potřeba upravit také šířky v `generate-home-images.cjs` a `srcset` v `index.html`. Úvodní fotografie se načítají hned; pes Áres má nastavenou vysokou prioritu.
 
+# Portrét a náhledy poukazu
+
+Stránky `about.html` a `voucher.html` používají menší AVIF/WebP varianty a původní JPEG jako zálohu. Po výměně portrétu nebo náhledů poukazu spusťte ve složce `tools`:
+
+```powershell
+npm install
+npm run page:images
+```
+
+Skript vytvoří varianty v `images/optimized/` a aktualizuje otisky v odkazech. Pokud se změní šířka zdrojového souboru, upravte šířky v `generate-page-images.cjs` a `srcset` v příslušné HTML stránce.
+
 # Cache obrázků
 
 Odkazy na obrázky v HTML a CSS obsahují prvních 16 znaků SHA-256 souboru v parametru `?v=...`. Když se soubor změní, musí se změnit také tento parametr. Vercel dává takovým URL cache na rok (`immutable`); přímé URL bez `v` zůstávají na jedné hodině. Parametr mění URL v prohlížeči, soubory se nekopírují.
 
-Skripty `portfolio:images` a `home:images` po vytvoření variant odkazy aktualizují automaticky. Při sestavení na Vercelu se otisky zkontrolují a případně přepíšou znovu. Po ruční výměně obrázku nebo spuštění `optimize-images.ps1` použijte i místně:
+Skripty `portfolio:images`, `home:images` a `page:images` po vytvoření variant odkazy aktualizují automaticky. Při sestavení na Vercelu se otisky zkontrolují a případně přepíšou znovu. Po ruční výměně obrázku nebo spuštění `optimize-images.ps1` použijte i místně:
 
 ```powershell
 npm run images:version
