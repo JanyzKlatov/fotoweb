@@ -1433,6 +1433,13 @@ body {
     color: var(--text);
 }
 
+.footer-credit {
+    display: block;
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
 /* TERMS */
 
 .terms-section {
